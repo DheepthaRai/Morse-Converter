@@ -16,9 +16,10 @@ MORSE_CODE_DICT = { 'A':'.-', 'B':'-...',
 
 def decrypt(message):
     message += ' '
+    # adding an extra space to mark the end
 
     decipher = ''
-    citext = ''
+    temp = ''
     for letter in message:
 
         # checks for space
@@ -28,7 +29,7 @@ def decrypt(message):
             i = 0
 
             # storing morse code of a single character
-            citext += letter
+            temp += letter
 
             # in case of space
         else:
@@ -43,15 +44,13 @@ def decrypt(message):
             else:
                 decipher += list(MORSE_CODE_DICT.keys())[list(MORSE_CODE_DICT
                                                               .values()).index(citext)]
-                citext = ''
+                temp = ''
 
     return decipher
 
 def main():
-    message = input('Enter the morese you want to decrypt: ')
+    message = input('Enter the morse code you want to decrypt: ')
     print(decrypt(message))
 
 if __name__ == '__main__':
     main()
-
-
