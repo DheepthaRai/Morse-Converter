@@ -43,7 +43,7 @@ def decrypt(message):
                 decipher += ' '
             else:
                 decipher += list(MORSE_CODE_DICT.keys())[list(MORSE_CODE_DICT
-                                                              .values()).index(citext)]
+                                                              .values()).index(temp)]
                 temp = ''
 
     return decipher
