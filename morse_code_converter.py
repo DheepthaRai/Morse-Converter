@@ -25,8 +25,7 @@ def encrypt(message):
 
 def main():
     message = input('Enter the message you want to be encrypted to morse: ')
-    result = encrypt(message.upper())
-    print(result)
+    print(encrypt(message.upper()))
 
 if __name__ == '__main__':
     main()
